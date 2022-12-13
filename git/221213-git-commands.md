@@ -30,6 +30,9 @@ ESC # back to normal mode
 - 단순한 구조와 빠른 속도를 가짐.
 - 분산형 저장소를 지원함.
 - 비선형적 개발(수천개의 브랜치) 가능
+- <b>git은 github와 같지 않다!</b>
+	- git : 버전 관리 시스템
+	- github : git을 기반으로 한 클라우드 저장 서비스
 
 ### Git의 장점
 - 소스코드 주고받기 없이 동시작업 가능해져 생산성 증가
@@ -44,3 +47,28 @@ ESC # back to normal mode
 
 ### git Process Flow
 ![git Process Flow](https://res.cloudinary.com/practicaldev/image/fetch/s--M_fHUEqA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/128hsgntnsu9bww0y8sz.png)
+
+#### Working Directory
+* untracked : 아직 tracking이 되지 않은 파일
+- 기존에 존재하던 프로젝트에서 git을 초기화하거나 파일을 새로 만들면(또는 처음 저장소를 clone하면) untracked 상태이다.
+
+* tracked : unmodified/modified로 나눌 수 있다. checkout된 이후 수정사항이 있지만 stage 되지 않으면 modified된 상태이다.
+- modified된 파일만 staging area로 옮겨갈 수 있다.
+
+#### Staging Area
+* tracked & staged 상태
+* `git add` 명령어를 통해 파일을 Staging Area에 올릴 수 있다.
+* `git reset HEAD {파일 이름}`를 이용하면 unstage (staging area -> working directory)가 가능하다.
+
+#### Localrepo
+* 오프라인에서도 flow에 따라 작업 가능한 로컬 저장소
+* `git commit`을 통해 Staging Area에서 Localrepo로 올릴 수 있다.
+* 작업 단위에 따라 파일들을 commit할 수 있다.
+
+#### Remoterepo
+* 원격 저장소
+* `git push` 명령어를 통해 로컬 저장소에서 원격 저장소로 파일과 commit 업로드 가능
+* push를 하면 이력을 지울 수 없으므로 주의해야 한다.
+
+
+---
