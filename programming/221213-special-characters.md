@@ -2,7 +2,7 @@
 
 |기호|영어|한글|
 |---|---|---|
-|`|backtick, Grave|백틱, 그레이브|
+|` ` `|backtick, Grave|백틱, 그레이브|
 |`~`|Tilde|물결표시|
 |`!`|Exclamation mark|느낌표|
 |`@`|At sign|골뱅이|
@@ -23,8 +23,8 @@
 |`.`|Period, Dot|마침표|
 |`?`|Question mark|물음표|
 |`/`|Slash|슬래시|
-|`|`|Vertrical bar|버티컬 바|
-|\|Backslash|역 슬래시|
+| ` | ` |Vertrical bar|버티컬 바|
+|` \ `|Backslash|역 슬래시|
 |`()`|Parenthesis|소괄호,괄호|
 |`{}`|Brace|중괄호|
 |`[]`|Bracket|대괄호|
