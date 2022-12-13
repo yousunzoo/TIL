@@ -33,6 +33,7 @@ $ cd Documents/ # Documents/ 디렉토리로 이동 (change directory)
 $ cd .. # 상위 디렉토리로 이동
 $ pwd # print working directory (절대 경로로 표현된다.)
 
+$ mkdir dev # dev 디렉토리 생성 (make directory)
 ```
 
 ### 파일에 관한 command
