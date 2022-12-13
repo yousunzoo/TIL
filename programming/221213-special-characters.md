@@ -23,7 +23,7 @@
 |`.`|Period, Dot|마침표|
 |`?`|Question mark|물음표|
 |`/`|Slash|슬래시|
-| `&#124;` |Vertrical bar|버티컬 바|
+| &#124; |Vertrical bar|버티컬 바|
 |` \ `|Backslash|역 슬래시|
 |`()`|Parenthesis|소괄호,괄호|
 |`{}`|Brace|중괄호|
