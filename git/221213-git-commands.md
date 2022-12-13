@@ -164,3 +164,11 @@ git을 통해 remote repository에서 프로젝트 코드를 checkout하면 나�
 `$ git remote` command를 사용하면 remote repository 리스트를 볼 수 있는데, 이 때 repository의 URL이 출력되지 않고 alias인 `origin`이 대신 출력되는 것을 볼 수 있다.
 
 `$ git remote -v`를 사용하면 alias와 URL이 함께 출력되는 것을 볼 수 있다.
+
+`$ git remote add {name} {repository address}`를 사용해서 `origin` 대신 새로운 이름의 별명을 사용할 수 있다.
+```shell
+$ git remote add apple {address}
+$ git remote # origin과 apple 두개가 뜸
+$ git push apple main
+$ git remote remove apple # 해당 별명 삭제
+```
