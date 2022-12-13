@@ -34,6 +34,8 @@ $ cd .. # 상위 디렉토리로 이동
 $ pwd # print working directory (절대 경로로 표현된다.)
 
 $ mkdir dev # dev 디렉토리 생성 (make directory)
+$ rmdir dev # dev 디렉토리 삭제 (remove directory)
+# rmdir는 빈 디렉토리일 때만 가능, 나머지는 rm -r [디렉토리명]
 ```
 
 ### 파일에 관한 command
