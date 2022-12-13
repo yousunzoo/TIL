@@ -72,3 +72,95 @@ ESC # back to normal mode
 
 
 ---
+### Before start
+* windows에서는 git bash 프로그램 통해서 git 사용
+* git 설치 확인 : `$ git -v`
+* git 초기 설정
+```shell
+$ git config --global user.name "username"
+$ git config --global user.email "useremail"
+$ git config --global core.ditor "vim"
+$ git config --global core.pager "cat"
+```
+
+* `$ git config --list`로 설정 정상적으로 되었는지 확인
+* 수정이 필요할 경우, `$ vi ~/.gitconfig`에서 수정 가능
+
+### First Repo
+```shell
+$ mkdir first-repo && cd first-repo
+$ git init # 새로운 git 저장소 생성
+$ git remote add origin https://github.com/{username}/{reponame}.git # 해당 주소로 원격 저장소 생성
+$ touch README.md
+$ git add README.md # stage에 README.md 올림
+$ git commit -m "first push" # 해당 내용의 commit 생성
+$ git push -u origin master # 원격 저장소로 보냄
+
+# git status로 현재 git 상태 확인 가능
+```
+
+### Second push to First Repo
+```shell
+# make some change on README.md
+
+$ git add . # 변화가 일어난 전체 파일을 stage에 올림
+$ git commit # vim으로 진입해서 commit의 제목 및 설명 작성 가능
+$ git push origin main # 원격 저장소로 보냄
+```
+
+### start project with clone
+* github에서 repository를 형성한다.
+```shell
+$ git clone {repo address}
+```
+
+## Git Commits
+ref : [conventional commits reference](https://www.conventionalcommits.org/ko/v1.0.0/)
+
+1. commit의 제목은 commit을 설명하는 하나의 구나 절로 완성. (문장형 x)
+2. importance of capitalize `Importance of Capitalize`
+3. prefix 꼭 달기
+	- `feat:` 기능 개발 관련
+	- `fix:` 오류 개선 혹은 버그 패치, 파일트리 변경
+	- `docs:` 문서화 작업
+	- `test:` test 관련
+	- `conf:` 환경설정 관련
+	- `build:` 빌드 관련
+	- `ci:` Continuous Integration 관련
+
+	* `TIL` repository에서는 md 파일은 feat 역할. 수정하면 docs 역할
+
+### Prefix example
+* Commit Convention은 팀마다 다를 수 있으니 관련 문서를 참조할 것!
+
+```shell
+feat: Add server.py
+fix: Fix Typo server.py
+docs: Add README.md, LICENSE
+conf: Create .env, .gitignore, dockerfile
+BREAKING CHANGE: Drop Support /api/v1
+refactor: Refactor user classes
+```
+
+### Commit할 때 기억해야 할 것
+* commit은 동작 가능한 최소단위로 자주 할 것. `ex) 컴포넌트 한 단위, function 한 단위`
+* 해당 작업 단위에 수행된 모든 파일 변화가 해당 commit에 포함되어야 함
+* 모두가 이해할 수 있는 log를 작성할 것
+* Open source contribution 시 영어가 강제되지만, 그렇지 않을 경우 팀 내 사용 언어를 따라 쓸 것
+* 제목은 축약(50자 이내), 내용은 문장형으로 작성
+* 제목과 내용은 한 줄 띄워 분리할 것 (vim 사용 시)
+* 내용은 이 commit의 구성과 의도를 충실히 작성
+
+### HEAD
+해당 branch의 마지막 commit을 뜻한다.
+HEAD는 항상 현재 checkout된 branch의 가장 최신 commit을 포인팅한다. (내가 현재 내가 바라보고 있는 commit)
+그 외의 branch의 최신 commit은 commit hash 뒤에 ([branch name])으로 표기된다.
+
+### origin
+git을 통해 remote repository에서 프로젝트 코드를 checkout하면 나는 나만의 local repository를 갖게 되고, commit과 push, pull 등의 commands를 통해 remote repository와 협업을 하게 된다.
+이 때, remote repository의 URL을 일일이 입력하기에는 번거롭기 때문에 "origin"이라고 하는 키워드(alias)를 대신 활용한다.
+즉, `origin/branch_name`이라고 하면 remote repository에 존재하는 branch_name을 가지는 branch를 참조하게 되는 것이다.
+
+`$ git remote` command를 사용하면 remote repository 리스트를 볼 수 있는데, 이 때 repository의 URL이 출력되지 않고 alias인 `origin`이 대신 출력되는 것을 볼 수 있다.
+
+`$ git remote -v`를 사용하면 alias와 URL이 함께 출력되는 것을 볼 수 있다.
