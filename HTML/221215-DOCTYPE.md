@@ -45,6 +45,12 @@ W3C가 의도했던 문서 타입으로, 구조와 표현을 분리하기 위해
 
 center, font, iframe, strike, u, 새 창 띄우기 등이 제한된다.
 
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1-strict.dtd">
+```
+
+
+
 
 
 ##### Transitional DTD
@@ -53,19 +59,20 @@ center, font, iframe, strike, u, 새 창 띄우기 등이 제한된다.
 
 iframe과 새 창 띄우기 등을 사용할 수 있어 XHTML 사용 시 transitional DTD 추천.
 
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1-transitional.dtd">
+```
+
 
 
 ##### Frameset DTD
 
 현재는 거의 사용하지 않는 frameset을 구현하기 위해서 사용한다.
 
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1-frameset.dtd">
+```
 
 
-#### HTML 4.01 DOCTYPE 선언
 
-##### strict DTD
-
-##### transitional DTD
-
-##### Frameset DTD
 
