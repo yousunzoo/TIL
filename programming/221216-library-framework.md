@@ -20,7 +20,7 @@
 
 이 자체로는 사용자가 직접 일반적인 조작으로 실행할 수 없으며, 해당 라이브러리의 기능을 직접 호출하는 프로그램을 실행하거나, 사용자가 해당 라이브러리의 기능을 실행하는 API를 사용하는 프로그램을 직접 개발하면 실행할 수 있다.
 
-![img](https://postfiles.pstatic.net/MjAyMjA0MTFfMjk0/MDAxNjQ5NjczNjAwMzcx.awkwFTcpVjWHdotW618ZzHgpvtG4LRn7td7Srp2FyxMg.-HjIQUlNpzn3xquWg9-zSO75EfXakA57_KSAquLoOGIg.PNG.sw_maestro/004.png?type=w966)
+🔹예) React, jQuery, OpenGl...
 
 
 
@@ -29,6 +29,8 @@
 하나의 프로그램을 개발할 때, 개발의 다양한 기능들을 통합한 **공통적인 개발 환경을 제공**해주는 것을 말한다.
 
 개발에 필요한 화면 구현, DB 연동, 개발 환경들에 공통적인 부분을 제공하여 **작업 속도를 크게 높이고 단순화**하여 생산성을 높여준다.
+
+🔹예) Spring, Django, Flask, Bootstrap...
 
 
 
@@ -39,7 +41,7 @@
 3. 만약, 기존 프레임워크의 기능을 바꾸고 싶다면, 프레임워크를 고치면 된다. 즉, 완성된 코드들이 아니라 개발자가 코드를 작성하며 프로그램을 완성해야 하는 개념이다.
 4. 웹 응용 프로그램을 개발하기 위해 프레임워크가 반드시 필요한 것은 아니지만, 작업 속도를 크게 높이고 단순화할 수 있으며, 반응이 좋고 매력적인 웹앱을 만들 수 있다는 장점이 있다.
 
-![img](https://postfiles.pstatic.net/MjAyMjA0MTFfMjc3/MDAxNjQ5NjczNjAwMzcy.YLeaQ7C1Q1uT4nPp-bpl_5kUICaAdnZOU242_r54Grsg.51RM-WZxJ8FeRn1WI_t8n_yaZpAqVgxtAXCKiVyLG-Yg.PNG.sw_maestro/006.png?type=w966)
+
 
 
 
