@@ -1,0 +1,88 @@
+# 생성자 함수(prototype)
+
+```javascript
+const seon = {
+    firstName : 'Seon',
+    lastName : 'Yoo',
+    getFullName: function(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+const amy = {
+    firstName : 'Amy',
+    lastName : 'Clarke',
+    getFullName: function(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+const neo = {
+    firstName : 'Neo',
+    lastName : 'Smith',
+    getFullName: function(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+```
+
+* 객체 내의 메소드에서 객체 자신의 속성을 가져올 때 `this`를 통해 불러올 수 있다.
+* 여러 개의 객체가 같은 모양이라도, 일일이 객체에 메소드를 적는다면 로직이 똑같음에도 불구하고 만든 객체 수만큼 계속에서 메모리에 함수가 할당되는 문제가 발생한다. ➡️ 클래스를 통해 해결 가능
+
+
+
+```javascript
+function User(first, last){
+    this.firstName = first
+    this.last = last
+}
+
+user.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`
+}
+
+const seon = new User('Seon', 'Yoo');
+const amy = new User('Amy', 'Clarke');
+const neo = new User('Neo', 'Smith');
+
+console.log(seon); // User {firstName:'Seon', lastName : 'Yoo'}
+console.log(seon.getFullName()); // Seon Yoo
+```
+
+
+
+* `user` 함수를 호출할 때 `new` 키워드와 함께 호출하는 것을 **생성자 함수**라고 부른다.
+  * `new` 키워드를 통해 선언하는 함수명은 파스칼 케이스로 만들 것!
+* 생성자 함수를 통해 하나의 객체를 만들어낸다. (리터럴 방식)
+* 생성자 함수로 실행한 결과를 반환해서 할당된 변수를 **인스턴스**라고 한다.
+* 생성자 함수를 작성하고 `new` 연산자를 사용해 객체를 생성하면, 같은 프로토타입을 가지는 객체들을 생성할 수 있다.
+* `prototype.function`을 통해 추가된 프로퍼티나 메소드는 생성자 함수를 통해 객체를 여러 개 만들더라도 메모리에 한 번만 만들어진다.
+  * `seon.getFullName()`은 `user.prototype.getFullName` 함수를 참조하는 것!
+
+
+
+* 자바스크립트의 모든 객체는 프로토타입(prototype)이라는 객체를 가지고 있다.
+* 모든 객체는 프로토타입으로부터 프로퍼티와 메소드를 상속받는다.
+* `.prototype`으로 프로토타입이 상속되는 연결 고리를 프로토타입 체인이라고 한다.
+* `Object.prototype` 객체는 프로토타입 체인에서도 가장 상위에 존재하는 프로토타입이다.
+  * 모든 객체는 `Object.prototype` 객체를 프로토타입으로 상속받는다.
+
+
+
+```javascript
+var obj = new Object(); // 이 객체의 프로토타입은 Object.prototype입니다.
+
+var arr = new Array();  // 이 객체의 프로토타입은 Array.prototype입니다.
+
+var date = new Date();  // 이 객체의 프로토타입은 Date.prototype입니다.
+```
+
+
+
+
+
+---
+
+## 참고
+
+[프로토타입](http://www.tcpschool.com/javascript/js_object_prototype)
