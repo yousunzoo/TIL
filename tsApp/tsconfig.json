@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ESNext", // 어떤 버전의 Js 문법으로 컴파일할지 결정
+		"useDefineForClassFields": true, // define property 를 활용해서 class field 를 정의
+		"lib": ["DOM", "DOM.Iterable", "ESNext"], // 포함될 라이브러리 목록 (비유를 하자면, 정확히 어떤 자바스크립트 내장 문법/기능들을 포함시킬지를 지정)
+		"allowJs": false, // js 파일을 ts 에서 import해와서 쓸 수 있는지
+		"skipLibCheck": true, // library 파일에 대해서 타입 체크 스킵
+		"esModuleInterop": false, // 모듈 import 방식 변환에 대한 설정
+		"allowSyntheticDefaultImports": true, // import 호환 설정
+		"strict": true, // strict 모드 활성화
+		"forceConsistentCasingInFileNames": true, // 파일 이름에 대한 대소문자 구별을 강제
+		"module": "ESNext", // 어떤 import 문법을 사용할지
+		"moduleResolution": "Node", // 모듈 해석 전략을 결정
+		"resolveJsonModule": true, // 확장자가 json 인 모듈의 import 를 허용
+		"isolatedModules": true, // 각 파일을 모듈로 분리 생성
+		"noEmit": true, // 컴파일러가 js 등 출력 파일을 만들어 내지 않도록 설정
+		"jsx": "react-jsx" // tsx 파일을 jsx 로 컴파일하는 방식 지정
+	},
+	"include": ["src"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

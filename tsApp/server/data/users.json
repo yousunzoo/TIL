@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"username": "username",
+		"email": "me@home.org",
+		"password": "$2b$10$zctxUVDyy3jzvSp68oKpMOnkyra4R.NzOFVh9aii3Y43X7XtetoyK"
+	},
+	{
+		"id": 2,
+		"username": "test",
+		"email": "test@test.com",
+		"password": "$2b$10$Tv9cwHLVZY81L0FIS44NC.LIt9p4Z9mZ7vekNBahu83vrC6oSnpnC"
+	},
+	{
+		"id": 3,
+		"username": "test2",
+		"email": "test2@test.com",
+		"password": "$2b$10$fOxc.fDLHVRsf4qFBtJA7.l3R873jOYFHIahvlkGfjynpHSO3bnuO"
+	},
+	{
+		"id": 4,
+		"username": "test3",
+		"email": "test3@test.com",
+		"password": "$2b$10$yzDuyrsn8/vAJ1w9vPptR.4lOKtlPkSfEZzxa5OsdXRUmsRK.Z0me"
+	},
+	{
+		"id": 5,
+		"username": "testtest",
+		"email": "test5@test.com",
+		"password": "$2b$10$N6BXUtTXIYjtrn8AdzEoguDeL8HFmQqcU.kp4H05ul84jh8JP1V.K"
+	}
+]
